@@ -8,7 +8,7 @@ var canvas;
 var ctx;
 
 // state
-var cellSize; 
+var cellSize;
 var padding;
 var world = [
     [0, 1, 0, 0, 1, 0, 1, 0],
@@ -27,9 +27,9 @@ function init() {
     window.requestAnimationFrame(renderLoop);
 
     // logic update loop
-    setInterval(function() {
+    setInterval(function () {
         worldTick();
-    },200);
+    }, 200);
 }
 
 function worldTick() {
@@ -69,12 +69,11 @@ function renderLoop(now) {
             } else {
                 ctx.fillStyle = '#000000';
             }
-            
+
             drawCellAt(ctx, x, y, cellSize - padding);
         }
     }
     // keep rendering going
-    
     window.requestAnimationFrame(renderLoop)
 }
 
